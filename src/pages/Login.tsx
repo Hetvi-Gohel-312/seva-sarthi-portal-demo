@@ -5,11 +5,8 @@ import LoginForm from "@/components/auth/LoginForm";
 const Login = () => {
   return (
     <Layout>
-      <div className="container section">
-        <h1 className="text-center">Login to Your Account</h1>
-        <div className="flex justify-center">
-          <LoginForm />
-        </div>
+      <div className="container section" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: 'calc(100vh - 200px)' }}>
+        <LoginForm />
       </div>
     </Layout>
   );

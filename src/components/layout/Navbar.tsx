@@ -1,14 +1,19 @@
 
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, User, ChevronDown } from 'lucide-react';
 
 const Navbar = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
   
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const isActive = (path: string) => {
+    return location.pathname === path;
   };
   
   return (
@@ -25,10 +30,34 @@ const Navbar = () => {
         {/* Navigation menu */}
         <div className={`navbar-menu ${isMobileMenuOpen ? 'mobile-menu-open' : ''}`}>
           <div className="navbar-links">
-            <Link to="/" onClick={() => setIsMobileMenuOpen(false)}>Home</Link>
-            <Link to="/services" onClick={() => setIsMobileMenuOpen(false)}>Services</Link>
-            <Link to="/track" onClick={() => setIsMobileMenuOpen(false)}>Track Status</Link>
-            <Link to="/contact" onClick={() => setIsMobileMenuOpen(false)}>Contact</Link>
+            <Link 
+              to="/" 
+              onClick={() => setIsMobileMenuOpen(false)}
+              style={{ color: isActive('/') ? 'var(--gold)' : '' }}
+            >
+              Home
+            </Link>
+            <Link 
+              to="/services" 
+              onClick={() => setIsMobileMenuOpen(false)}
+              style={{ color: isActive('/services') ? 'var(--gold)' : '' }}
+            >
+              Services
+            </Link>
+            <Link 
+              to="/track" 
+              onClick={() => setIsMobileMenuOpen(false)}
+              style={{ color: isActive('/track') ? 'var(--gold)' : '' }}
+            >
+              Track Status
+            </Link>
+            <Link 
+              to="/contact" 
+              onClick={() => setIsMobileMenuOpen(false)}
+              style={{ color: isActive('/contact') ? 'var(--gold)' : '' }}
+            >
+              Contact
+            </Link>
             
             <div className="dropdown">
               <div className="dropdown-trigger">
@@ -48,7 +77,17 @@ const Navbar = () => {
             {isLoggedIn ? (
               <div className="dropdown">
                 <div className="dropdown-trigger">
-                  <User size={18} />
+                  <div style={{
+                    width: '30px',
+                    height: '30px',
+                    borderRadius: '50%',
+                    background: 'var(--light)',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center'
+                  }}>
+                    <User size={18} color="var(--primary)" />
+                  </div>
                   <span>My Account</span>
                   <ChevronDown size={16} />
                 </div>
@@ -68,8 +107,12 @@ const Navbar = () => {
               </div>
             ) : (
               <>
-                <Link to="/login" className="button button-outline" onClick={() => setIsMobileMenuOpen(false)}>Login</Link>
-                <Link to="/register" className="button button-primary" onClick={() => setIsMobileMenuOpen(false)}>Register</Link>
+                <Link to="/login" className="button button-outline" onClick={() => setIsMobileMenuOpen(false)}>
+                  Login
+                </Link>
+                <Link to="/register" className="button button-secondary" onClick={() => setIsMobileMenuOpen(false)}>
+                  Register
+                </Link>
               </>
             )}
           </div>
@@ -77,7 +120,7 @@ const Navbar = () => {
         
         {/* Mobile menu button */}
         <button className="mobile-menu-button" onClick={toggleMobileMenu}>
-          {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          {isMobileMenuOpen ? <X size={24} color="white" /> : <Menu size={24} color="white" />}
         </button>
       </div>
     </nav>

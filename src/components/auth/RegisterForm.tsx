@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useToast } from "@/components/ui/use-toast";
+import { User, Mail, Phone, Lock, CheckCircle } from "lucide-react";
 
 const RegisterForm = () => {
   const [formData, setFormData] = useState({
@@ -48,82 +49,107 @@ const RegisterForm = () => {
   };
 
   return (
-    <div className="form-container">
-      <h2 className="form-title">Create an account</h2>
-      <p className="text-center">Register to access Seva Sarthi services</p>
+    <div className="form-container" style={{ width: '100%', maxWidth: '500px' }}>
+      <h2 className="form-title">Create an Account</h2>
+      <p className="text-center" style={{ marginBottom: '2rem' }}>Register to access Seva Sarthi services</p>
       
       <form onSubmit={handleSubmit}>
         <div className="form-group">
           <label htmlFor="name" className="form-label">Full Name</label>
-          <input
-            id="name"
-            name="name"
-            type="text"
-            className="form-control"
-            placeholder="Enter your full name"
-            value={formData.name}
-            onChange={handleChange}
-            required
-          />
+          <div style={{ position: 'relative' }}>
+            <input
+              id="name"
+              name="name"
+              type="text"
+              className="form-control"
+              placeholder="Enter your full name"
+              value={formData.name}
+              onChange={handleChange}
+              style={{ paddingLeft: '45px' }}
+              required
+            />
+            <User size={18} style={{ position: 'absolute', left: '15px', top: '50%', transform: 'translateY(-50%)', color: '#6c757d' }} />
+          </div>
         </div>
         
         <div className="form-group">
-          <label htmlFor="email" className="form-label">Email</label>
-          <input
-            id="email"
-            name="email"
-            type="email"
-            className="form-control"
-            placeholder="Enter your email"
-            value={formData.email}
-            onChange={handleChange}
-            required
-          />
+          <label htmlFor="email" className="form-label">Email Address</label>
+          <div style={{ position: 'relative' }}>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              className="form-control"
+              placeholder="Enter your email"
+              value={formData.email}
+              onChange={handleChange}
+              style={{ paddingLeft: '45px' }}
+              required
+            />
+            <Mail size={18} style={{ position: 'absolute', left: '15px', top: '50%', transform: 'translateY(-50%)', color: '#6c757d' }} />
+          </div>
         </div>
         
         <div className="form-group">
           <label htmlFor="phone" className="form-label">Mobile Number</label>
-          <input
-            id="phone"
-            name="phone"
-            type="tel"
-            className="form-control"
-            placeholder="Enter your mobile number"
-            value={formData.phone}
-            onChange={handleChange}
-            required
-          />
+          <div style={{ position: 'relative' }}>
+            <input
+              id="phone"
+              name="phone"
+              type="tel"
+              className="form-control"
+              placeholder="Enter your mobile number"
+              value={formData.phone}
+              onChange={handleChange}
+              style={{ paddingLeft: '45px' }}
+              required
+            />
+            <Phone size={18} style={{ position: 'absolute', left: '15px', top: '50%', transform: 'translateY(-50%)', color: '#6c757d' }} />
+          </div>
         </div>
         
         <div className="form-group">
           <label htmlFor="password" className="form-label">Password</label>
-          <input
-            id="password"
-            name="password"
-            type="password"
-            className="form-control"
-            placeholder="Create a password"
-            value={formData.password}
-            onChange={handleChange}
-            required
-          />
+          <div style={{ position: 'relative' }}>
+            <input
+              id="password"
+              name="password"
+              type="password"
+              className="form-control"
+              placeholder="Create a password"
+              value={formData.password}
+              onChange={handleChange}
+              style={{ paddingLeft: '45px' }}
+              required
+            />
+            <Lock size={18} style={{ position: 'absolute', left: '15px', top: '50%', transform: 'translateY(-50%)', color: '#6c757d' }} />
+          </div>
         </div>
         
         <div className="form-group">
           <label htmlFor="confirmPassword" className="form-label">Confirm Password</label>
-          <input
-            id="confirmPassword"
-            name="confirmPassword"
-            type="password"
-            className="form-control"
-            placeholder="Confirm your password"
-            value={formData.confirmPassword}
-            onChange={handleChange}
-            required
-          />
+          <div style={{ position: 'relative' }}>
+            <input
+              id="confirmPassword"
+              name="confirmPassword"
+              type="password"
+              className="form-control"
+              placeholder="Confirm your password"
+              value={formData.confirmPassword}
+              onChange={handleChange}
+              style={{ paddingLeft: '45px' }}
+              required
+            />
+            <CheckCircle size={18} style={{ position: 'absolute', left: '15px', top: '50%', transform: 'translateY(-50%)', color: '#6c757d' }} />
+          </div>
         </div>
         
-        <button type="submit" className="button button-primary form-button" disabled={isLoading}>
+        <button 
+          type="submit" 
+          className="button button-primary form-button" 
+          disabled={isLoading}
+          style={{ marginTop: '1.5rem' }}
+        >
           {isLoading ? "Creating account..." : "Register"}
         </button>
       </form>

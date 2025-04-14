@@ -5,11 +5,8 @@ import RegisterForm from "@/components/auth/RegisterForm";
 const Register = () => {
   return (
     <Layout>
-      <div className="container section">
-        <h1 className="text-center">Create New Account</h1>
-        <div className="flex justify-center">
-          <RegisterForm />
-        </div>
+      <div className="container section" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: 'calc(100vh - 200px)' }}>
+        <RegisterForm />
       </div>
     </Layout>
   );

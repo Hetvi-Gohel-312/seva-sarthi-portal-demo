@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useToast } from "@/components/ui/use-toast";
+import { User, Lock } from "lucide-react";
 
 const LoginForm = () => {
   const [formData, setFormData] = useState({
@@ -35,44 +36,59 @@ const LoginForm = () => {
   };
 
   return (
-    <div className="form-container">
-      <h2 className="form-title">Login to your account</h2>
-      <p className="text-center">Enter your credentials to access your Seva Sarthi account</p>
+    <div className="form-container" style={{ width: '100%', maxWidth: '450px' }}>
+      <h2 className="form-title">Welcome Back</h2>
+      <p className="text-center" style={{ marginBottom: '2rem' }}>Enter your credentials to access your Seva Sarthi account</p>
       
       <form onSubmit={handleSubmit}>
         <div className="form-group">
-          <label htmlFor="email" className="form-label">Email</label>
-          <input
-            id="email"
-            name="email"
-            type="email"
-            className="form-control"
-            placeholder="Enter your email"
-            value={formData.email}
-            onChange={handleChange}
-            required
-          />
+          <label htmlFor="email" className="form-label">Email Address</label>
+          <div style={{ position: 'relative' }}>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              className="form-control"
+              placeholder="Enter your email"
+              value={formData.email}
+              onChange={handleChange}
+              style={{ paddingLeft: '45px' }}
+              required
+            />
+            <User size={18} style={{ position: 'absolute', left: '15px', top: '50%', transform: 'translateY(-50%)', color: '#6c757d' }} />
+          </div>
         </div>
         
         <div className="form-group">
-          <div className="flex justify-between">
+          <div style={{ display: 'flex', justifyContent: 'space-between' }}>
             <label htmlFor="password" className="form-label">Password</label>
-            <Link to="/forgot-password">Forgot password?</Link>
+            <Link to="/forgot-password" style={{ color: 'var(--secondary)', fontWeight: 500, fontSize: '0.875rem' }}>
+              Forgot password?
+            </Link>
           </div>
-          <input
-            id="password"
-            name="password"
-            type="password"
-            className="form-control"
-            placeholder="Enter your password"
-            value={formData.password}
-            onChange={handleChange}
-            required
-          />
+          <div style={{ position: 'relative' }}>
+            <input
+              id="password"
+              name="password"
+              type="password"
+              className="form-control"
+              placeholder="Enter your password"
+              value={formData.password}
+              onChange={handleChange}
+              style={{ paddingLeft: '45px' }}
+              required
+            />
+            <Lock size={18} style={{ position: 'absolute', left: '15px', top: '50%', transform: 'translateY(-50%)', color: '#6c757d' }} />
+          </div>
         </div>
         
-        <button type="submit" className="button button-primary form-button" disabled={isLoading}>
-          {isLoading ? "Logging in..." : "Login"}
+        <button 
+          type="submit" 
+          className="button button-primary form-button" 
+          disabled={isLoading}
+          style={{ marginTop: '1.5rem' }}
+        >
+          {isLoading ? "Logging in..." : "Login to Account"}
         </button>
       </form>
       
