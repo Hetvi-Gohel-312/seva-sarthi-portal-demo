@@ -1,7 +1,7 @@
 
 import Layout from "@/components/layout/Layout";
 import { Link } from "react-router-dom";
-import { FileText, User, FileCheck, VoteIcon, MessageSquare, Robot, Bell, Search } from "lucide-react";
+import { FileText, User, FileCheck, VoteIcon, MessageSquare, Bot, Bell, Search } from "lucide-react";
 
 const services = [
   {
@@ -24,7 +24,7 @@ const services = [
   },
   {
     title: "AI Chatbot Assistance",
-    icon: <Robot className="card-icon" />,
+    icon: <Bot className="card-icon" />,
     description: "Get instant help with your queries through our AI chatbot.",
     link: "/services/chatbot"
   },
