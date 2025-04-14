@@ -13,7 +13,7 @@ const Navbar = () => {
   };
 
   const isActive = (path: string) => {
-    return location.pathname === path;
+    return location.pathname === path ? 'active' : '';
   };
   
   return (
@@ -32,29 +32,29 @@ const Navbar = () => {
           <div className="navbar-links">
             <Link 
               to="/" 
+              className={isActive('/')}
               onClick={() => setIsMobileMenuOpen(false)}
-              style={{ color: isActive('/') ? 'var(--gold)' : '' }}
             >
               Home
             </Link>
             <Link 
               to="/services" 
+              className={isActive('/services')}
               onClick={() => setIsMobileMenuOpen(false)}
-              style={{ color: isActive('/services') ? 'var(--gold)' : '' }}
             >
               Services
             </Link>
             <Link 
               to="/track" 
+              className={isActive('/track')}
               onClick={() => setIsMobileMenuOpen(false)}
-              style={{ color: isActive('/track') ? 'var(--gold)' : '' }}
             >
               Track Status
             </Link>
             <Link 
               to="/contact" 
+              className={isActive('/contact')}
               onClick={() => setIsMobileMenuOpen(false)}
-              style={{ color: isActive('/contact') ? 'var(--gold)' : '' }}
             >
               Contact
             </Link>
@@ -81,12 +81,12 @@ const Navbar = () => {
                     width: '30px',
                     height: '30px',
                     borderRadius: '50%',
-                    background: 'var(--light)',
+                    background: 'rgba(255, 255, 255, 0.2)',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center'
                   }}>
-                    <User size={18} color="var(--primary)" />
+                    <User size={18} />
                   </div>
                   <span>My Account</span>
                   <ChevronDown size={16} />

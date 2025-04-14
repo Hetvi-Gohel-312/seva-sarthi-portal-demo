@@ -68,7 +68,7 @@ const RegisterForm = () => {
               style={{ paddingLeft: '45px' }}
               required
             />
-            <User size={18} style={{ position: 'absolute', left: '15px', top: '50%', transform: 'translateY(-50%)', color: '#6c757d' }} />
+            <User size={18} style={{ position: 'absolute', left: '15px', top: '50%', transform: 'translateY(-50%)', color: 'var(--secondary-blue)' }} />
           </div>
         </div>
         
@@ -86,7 +86,7 @@ const RegisterForm = () => {
               style={{ paddingLeft: '45px' }}
               required
             />
-            <Mail size={18} style={{ position: 'absolute', left: '15px', top: '50%', transform: 'translateY(-50%)', color: '#6c757d' }} />
+            <Mail size={18} style={{ position: 'absolute', left: '15px', top: '50%', transform: 'translateY(-50%)', color: 'var(--secondary-blue)' }} />
           </div>
         </div>
         
@@ -104,7 +104,7 @@ const RegisterForm = () => {
               style={{ paddingLeft: '45px' }}
               required
             />
-            <Phone size={18} style={{ position: 'absolute', left: '15px', top: '50%', transform: 'translateY(-50%)', color: '#6c757d' }} />
+            <Phone size={18} style={{ position: 'absolute', left: '15px', top: '50%', transform: 'translateY(-50%)', color: 'var(--secondary-blue)' }} />
           </div>
         </div>
         
@@ -122,7 +122,7 @@ const RegisterForm = () => {
               style={{ paddingLeft: '45px' }}
               required
             />
-            <Lock size={18} style={{ position: 'absolute', left: '15px', top: '50%', transform: 'translateY(-50%)', color: '#6c757d' }} />
+            <Lock size={18} style={{ position: 'absolute', left: '15px', top: '50%', transform: 'translateY(-50%)', color: 'var(--secondary-blue)' }} />
           </div>
         </div>
         
@@ -140,7 +140,7 @@ const RegisterForm = () => {
               style={{ paddingLeft: '45px' }}
               required
             />
-            <CheckCircle size={18} style={{ position: 'absolute', left: '15px', top: '50%', transform: 'translateY(-50%)', color: '#6c757d' }} />
+            <CheckCircle size={18} style={{ position: 'absolute', left: '15px', top: '50%', transform: 'translateY(-50%)', color: 'var(--secondary-blue)' }} />
           </div>
         </div>
         

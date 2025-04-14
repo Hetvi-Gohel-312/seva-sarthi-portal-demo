@@ -18,7 +18,10 @@ import Dashboard from "./pages/Dashboard";
 import NotFound from "./pages/NotFound";
 import Services from "./pages/Services";
 import Contact from "./pages/Contact";
+import GrievanceSubmission from "./pages/GrievanceSubmission";
+import Announcements from "./pages/Announcements";
 
+// Initialize QueryClient
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -37,6 +40,8 @@ const App = () => (
           <Route path="/track" element={<Track />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/services/grievance" element={<GrievanceSubmission />} />
+          <Route path="/services/announcements" element={<Announcements />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

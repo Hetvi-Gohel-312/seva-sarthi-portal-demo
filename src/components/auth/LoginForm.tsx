@@ -55,14 +55,14 @@ const LoginForm = () => {
               style={{ paddingLeft: '45px' }}
               required
             />
-            <User size={18} style={{ position: 'absolute', left: '15px', top: '50%', transform: 'translateY(-50%)', color: '#6c757d' }} />
+            <User size={18} style={{ position: 'absolute', left: '15px', top: '50%', transform: 'translateY(-50%)', color: 'var(--secondary-blue)' }} />
           </div>
         </div>
         
         <div className="form-group">
           <div style={{ display: 'flex', justifyContent: 'space-between' }}>
             <label htmlFor="password" className="form-label">Password</label>
-            <Link to="/forgot-password" style={{ color: 'var(--secondary)', fontWeight: 500, fontSize: '0.875rem' }}>
+            <Link to="/forgot-password" style={{ color: 'var(--accent-blue)', fontWeight: 500, fontSize: '0.875rem' }}>
               Forgot password?
             </Link>
           </div>
@@ -78,7 +78,7 @@ const LoginForm = () => {
               style={{ paddingLeft: '45px' }}
               required
             />
-            <Lock size={18} style={{ position: 'absolute', left: '15px', top: '50%', transform: 'translateY(-50%)', color: '#6c757d' }} />
+            <Lock size={18} style={{ position: 'absolute', left: '15px', top: '50%', transform: 'translateY(-50%)', color: 'var(--secondary-blue)' }} />
           </div>
         </div>
         
