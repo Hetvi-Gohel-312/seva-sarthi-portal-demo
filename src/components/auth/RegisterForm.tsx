@@ -1,10 +1,6 @@
 
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { useToast } from "@/components/ui/use-toast";
 
 const RegisterForm = () => {
@@ -52,91 +48,93 @@ const RegisterForm = () => {
   };
 
   return (
-    <Card className="w-full max-w-md mx-auto">
-      <CardHeader>
-        <CardTitle className="text-2xl">Create an account</CardTitle>
-        <CardDescription>Register to access Seva Sarthi services</CardDescription>
-      </CardHeader>
-      <CardContent>
-        <form onSubmit={handleSubmit} className="space-y-4">
-          <div className="space-y-2">
-            <Label htmlFor="name">Full Name</Label>
-            <Input
-              id="name"
-              name="name"
-              placeholder="Enter your full name"
-              value={formData.name}
-              onChange={handleChange}
-              required
-            />
-          </div>
-          
-          <div className="space-y-2">
-            <Label htmlFor="email">Email</Label>
-            <Input
-              id="email"
-              name="email"
-              type="email"
-              placeholder="Enter your email"
-              value={formData.email}
-              onChange={handleChange}
-              required
-            />
-          </div>
-          
-          <div className="space-y-2">
-            <Label htmlFor="phone">Mobile Number</Label>
-            <Input
-              id="phone"
-              name="phone"
-              type="tel"
-              placeholder="Enter your mobile number"
-              value={formData.phone}
-              onChange={handleChange}
-              required
-            />
-          </div>
-          
-          <div className="space-y-2">
-            <Label htmlFor="password">Password</Label>
-            <Input
-              id="password"
-              name="password"
-              type="password"
-              placeholder="Create a password"
-              value={formData.password}
-              onChange={handleChange}
-              required
-            />
-          </div>
-          
-          <div className="space-y-2">
-            <Label htmlFor="confirmPassword">Confirm Password</Label>
-            <Input
-              id="confirmPassword"
-              name="confirmPassword"
-              type="password"
-              placeholder="Confirm your password"
-              value={formData.confirmPassword}
-              onChange={handleChange}
-              required
-            />
-          </div>
-          
-          <Button type="submit" className="w-full" disabled={isLoading}>
-            {isLoading ? "Creating account..." : "Register"}
-          </Button>
-        </form>
-      </CardContent>
-      <CardFooter className="flex justify-center">
-        <p className="text-sm text-gray-600">
+    <div className="form-container">
+      <h2 className="form-title">Create an account</h2>
+      <p className="text-center">Register to access Seva Sarthi services</p>
+      
+      <form onSubmit={handleSubmit}>
+        <div className="form-group">
+          <label htmlFor="name" className="form-label">Full Name</label>
+          <input
+            id="name"
+            name="name"
+            type="text"
+            className="form-control"
+            placeholder="Enter your full name"
+            value={formData.name}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        
+        <div className="form-group">
+          <label htmlFor="email" className="form-label">Email</label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            className="form-control"
+            placeholder="Enter your email"
+            value={formData.email}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        
+        <div className="form-group">
+          <label htmlFor="phone" className="form-label">Mobile Number</label>
+          <input
+            id="phone"
+            name="phone"
+            type="tel"
+            className="form-control"
+            placeholder="Enter your mobile number"
+            value={formData.phone}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        
+        <div className="form-group">
+          <label htmlFor="password" className="form-label">Password</label>
+          <input
+            id="password"
+            name="password"
+            type="password"
+            className="form-control"
+            placeholder="Create a password"
+            value={formData.password}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        
+        <div className="form-group">
+          <label htmlFor="confirmPassword" className="form-label">Confirm Password</label>
+          <input
+            id="confirmPassword"
+            name="confirmPassword"
+            type="password"
+            className="form-control"
+            placeholder="Confirm your password"
+            value={formData.confirmPassword}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        
+        <button type="submit" className="button button-primary form-button" disabled={isLoading}>
+          {isLoading ? "Creating account..." : "Register"}
+        </button>
+      </form>
+      
+      <div className="form-footer">
+        <p>
           Already have an account?{" "}
-          <Link to="/login" className="text-primary font-medium hover:underline">
-            Login
-          </Link>
+          <Link to="/login">Login</Link>
         </p>
-      </CardFooter>
-    </Card>
+      </div>
+    </div>
   );
 };
 

@@ -1,10 +1,6 @@
 
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { useToast } from "@/components/ui/use-toast";
 
 const LoginForm = () => {
@@ -39,56 +35,54 @@ const LoginForm = () => {
   };
 
   return (
-    <Card className="w-full max-w-md mx-auto">
-      <CardHeader>
-        <CardTitle className="text-2xl">Login to your account</CardTitle>
-        <CardDescription>Enter your credentials to access your Seva Sarthi account</CardDescription>
-      </CardHeader>
-      <CardContent>
-        <form onSubmit={handleSubmit} className="space-y-4">
-          <div className="space-y-2">
-            <Label htmlFor="email">Email</Label>
-            <Input
-              id="email"
-              name="email"
-              type="email"
-              placeholder="Enter your email"
-              value={formData.email}
-              onChange={handleChange}
-              required
-            />
+    <div className="form-container">
+      <h2 className="form-title">Login to your account</h2>
+      <p className="text-center">Enter your credentials to access your Seva Sarthi account</p>
+      
+      <form onSubmit={handleSubmit}>
+        <div className="form-group">
+          <label htmlFor="email" className="form-label">Email</label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            className="form-control"
+            placeholder="Enter your email"
+            value={formData.email}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        
+        <div className="form-group">
+          <div className="flex justify-between">
+            <label htmlFor="password" className="form-label">Password</label>
+            <Link to="/forgot-password">Forgot password?</Link>
           </div>
-          <div className="space-y-2">
-            <div className="flex justify-between items-center">
-              <Label htmlFor="password">Password</Label>
-              <Link to="/forgot-password" className="text-sm text-primary hover:underline">
-                Forgot password?
-              </Link>
-            </div>
-            <Input
-              id="password"
-              name="password"
-              type="password"
-              placeholder="Enter your password"
-              value={formData.password}
-              onChange={handleChange}
-              required
-            />
-          </div>
-          <Button type="submit" className="w-full" disabled={isLoading}>
-            {isLoading ? "Logging in..." : "Login"}
-          </Button>
-        </form>
-      </CardContent>
-      <CardFooter className="flex justify-center">
-        <p className="text-sm text-gray-600">
+          <input
+            id="password"
+            name="password"
+            type="password"
+            className="form-control"
+            placeholder="Enter your password"
+            value={formData.password}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        
+        <button type="submit" className="button button-primary form-button" disabled={isLoading}>
+          {isLoading ? "Logging in..." : "Login"}
+        </button>
+      </form>
+      
+      <div className="form-footer">
+        <p>
           Don't have an account?{" "}
-          <Link to="/register" className="text-primary font-medium hover:underline">
-            Register now
-          </Link>
+          <Link to="/register">Register now</Link>
         </p>
-      </CardFooter>
-    </Card>
+      </div>
+    </div>
   );
 };
 

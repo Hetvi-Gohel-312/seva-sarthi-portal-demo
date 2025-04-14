@@ -1,133 +1,84 @@
 
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Button } from '@/components/ui/button';
-import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Menu, X, User, ChevronDown } from 'lucide-react';
-import { 
-  DropdownMenu, 
-  DropdownMenuContent, 
-  DropdownMenuItem, 
-  DropdownMenuTrigger 
-} from '@/components/ui/dropdown-menu';
 
 const Navbar = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
   
   return (
-    <nav className="border-b bg-white">
-      <div className="container mx-auto px-4 py-3">
-        <div className="flex items-center justify-between">
-          {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
-              <span className="text-white font-bold text-sm">SS</span>
-            </div>
-            <span className="text-xl font-bold text-primary hidden md:inline-block">
-              Seva Sarthi
-            </span>
-          </Link>
-          
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
-            <Link to="/apply" className="text-gray-700 hover:text-primary transition-colors">Apply</Link>
-            <Link to="/track" className="text-gray-700 hover:text-primary transition-colors">Track Status</Link>
-            <Link to="/dashboard" className="text-gray-700 hover:text-primary transition-colors">Dashboard</Link>
+    <nav className="navbar">
+      <div className="container navbar-container">
+        {/* Logo */}
+        <Link to="/" className="navbar-logo">
+          <div className="logo-circle">
+            <span>SS</span>
+          </div>
+          <span>Seva Sarthi</span>
+        </Link>
+        
+        {/* Navigation menu */}
+        <div className={`navbar-menu ${isMobileMenuOpen ? 'mobile-menu-open' : ''}`}>
+          <div className="navbar-links">
+            <Link to="/" onClick={() => setIsMobileMenuOpen(false)}>Home</Link>
+            <Link to="/services" onClick={() => setIsMobileMenuOpen(false)}>Services</Link>
+            <Link to="/track" onClick={() => setIsMobileMenuOpen(false)}>Track Status</Link>
+            <Link to="/contact" onClick={() => setIsMobileMenuOpen(false)}>Contact</Link>
             
-            <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <Button variant="ghost" className="flex items-center gap-1">
-                  Services <ChevronDown size={16} />
-                </Button>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent>
-                <DropdownMenuItem>
-                  <Link to="/apply/birth-certificate" className="w-full">Birth Certificate</Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem>
-                  <Link to="/apply/income-certificate" className="w-full">Income Certificate</Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem>
-                  <Link to="/apply/caste-certificate" className="w-full">Caste Certificate</Link>
-                </DropdownMenuItem>
-              </DropdownMenuContent>
-            </DropdownMenu>
+            <div className="dropdown">
+              <div className="dropdown-trigger">
+                <span>Certificates</span>
+                <ChevronDown size={16} />
+              </div>
+              <div className="dropdown-menu">
+                <Link to="/apply/birth-certificate" className="dropdown-item" onClick={() => setIsMobileMenuOpen(false)}>Birth Certificate</Link>
+                <Link to="/apply/income-certificate" className="dropdown-item" onClick={() => setIsMobileMenuOpen(false)}>Income Certificate</Link>
+                <Link to="/apply/caste-certificate" className="dropdown-item" onClick={() => setIsMobileMenuOpen(false)}>Caste Certificate</Link>
+                <Link to="/apply/residence-certificate" className="dropdown-item" onClick={() => setIsMobileMenuOpen(false)}>Residence Certificate</Link>
+              </div>
+            </div>
           </div>
           
-          {/* Auth Buttons */}
-          <div className="hidden md:flex items-center space-x-4">
+          <div className="navbar-auth">
             {isLoggedIn ? (
-              <DropdownMenu>
-                <DropdownMenuTrigger asChild>
-                  <Button variant="ghost" className="flex items-center gap-2">
-                    <User size={18} />
-                    <span>My Account</span>
-                  </Button>
-                </DropdownMenuTrigger>
-                <DropdownMenuContent>
-                  <DropdownMenuItem>
-                    <Link to="/dashboard" className="w-full">Dashboard</Link>
-                  </DropdownMenuItem>
-                  <DropdownMenuItem>
-                    <Link to="/profile" className="w-full">Profile</Link>
-                  </DropdownMenuItem>
-                  <DropdownMenuItem onClick={() => setIsLoggedIn(false)}>
+              <div className="dropdown">
+                <div className="dropdown-trigger">
+                  <User size={18} />
+                  <span>My Account</span>
+                  <ChevronDown size={16} />
+                </div>
+                <div className="dropdown-menu">
+                  <Link to="/dashboard" className="dropdown-item" onClick={() => setIsMobileMenuOpen(false)}>Dashboard</Link>
+                  <Link to="/profile" className="dropdown-item" onClick={() => setIsMobileMenuOpen(false)}>Profile</Link>
+                  <button 
+                    className="dropdown-item" 
+                    onClick={() => {
+                      setIsLoggedIn(false);
+                      setIsMobileMenuOpen(false);
+                    }}
+                  >
                     Logout
-                  </DropdownMenuItem>
-                </DropdownMenuContent>
-              </DropdownMenu>
+                  </button>
+                </div>
+              </div>
             ) : (
               <>
-                <Link to="/login">
-                  <Button variant="outline">Login</Button>
-                </Link>
-                <Link to="/register">
-                  <Button>Register</Button>
-                </Link>
+                <Link to="/login" className="button button-outline" onClick={() => setIsMobileMenuOpen(false)}>Login</Link>
+                <Link to="/register" className="button button-primary" onClick={() => setIsMobileMenuOpen(false)}>Register</Link>
               </>
             )}
           </div>
-          
-          {/* Mobile Menu */}
-          <Sheet>
-            <SheetTrigger asChild>
-              <Button variant="ghost" size="icon" className="md:hidden">
-                <Menu className="h-6 w-6" />
-              </Button>
-            </SheetTrigger>
-            <SheetContent>
-              <div className="flex flex-col space-y-4 mt-8">
-                <Link to="/apply" className="py-2 text-lg hover:text-primary">Apply</Link>
-                <Link to="/track" className="py-2 text-lg hover:text-primary">Track Status</Link>
-                <Link to="/dashboard" className="py-2 text-lg hover:text-primary">Dashboard</Link>
-                <div className="py-2 text-lg hover:text-primary">Services</div>
-                <div className="pl-4 flex flex-col space-y-2">
-                  <Link to="/apply/birth-certificate" className="py-1 text-base hover:text-primary">Birth Certificate</Link>
-                  <Link to="/apply/income-certificate" className="py-1 text-base hover:text-primary">Income Certificate</Link>
-                  <Link to="/apply/caste-certificate" className="py-1 text-base hover:text-primary">Caste Certificate</Link>
-                </div>
-                <div className="pt-4 border-t">
-                  {isLoggedIn ? (
-                    <>
-                      <Link to="/profile" className="py-2 text-lg hover:text-primary">My Profile</Link>
-                      <Button variant="ghost" 
-                        className="w-full justify-start px-0 py-2 text-lg hover:text-primary"
-                        onClick={() => setIsLoggedIn(false)}
-                      >
-                        Logout
-                      </Button>
-                    </>
-                  ) : (
-                    <>
-                      <Link to="/login" className="py-2 text-lg hover:text-primary">Login</Link>
-                      <Link to="/register" className="py-2 text-lg hover:text-primary">Register</Link>
-                    </>
-                  )}
-                </div>
-              </div>
-            </SheetContent>
-          </Sheet>
         </div>
+        
+        {/* Mobile menu button */}
+        <button className="mobile-menu-button" onClick={toggleMobileMenu}>
+          {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+        </button>
       </div>
     </nav>
   );
