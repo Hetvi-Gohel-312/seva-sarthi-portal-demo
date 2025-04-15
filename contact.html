@@ -1,0 +1,266 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - Seva Sarthi Portal</title>
+    <meta name="description" content="Contact Seva Sarthi Portal" />
+    <meta name="author" content="Seva Sarthi" />
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
+    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="container navbar-container">
+          <!-- Logo -->
+          <a href="index.html" class="navbar-logo">
+            <div class="logo-circle">
+              <span>SS</span>
+            </div>
+            <span>Seva Sarthi</span>
+          </a>
+          
+          <!-- Navigation menu -->
+          <div class="navbar-menu">
+            <div class="navbar-links">
+              <a href="index.html">Home</a>
+              <a href="services.html">Services</a>
+              <a href="track.html">Track Status</a>
+              <a href="contact.html" class="active">Contact</a>
+              
+              <div class="dropdown">
+                <div class="dropdown-trigger">
+                  <span>Certificates</span>
+                  <i class="chevron-down"></i>
+                </div>
+                <div class="dropdown-menu">
+                  <a href="apply.html?type=birth" class="dropdown-item">Birth Certificate</a>
+                  <a href="apply.html?type=income" class="dropdown-item">Income Certificate</a>
+                  <a href="apply.html?type=caste" class="dropdown-item">Caste Certificate</a>
+                  <a href="apply.html?type=residence" class="dropdown-item">Residence Certificate</a>
+                </div>
+              </div>
+            </div>
+            
+            <div class="navbar-auth">
+              <a href="login.html" class="button button-outline">Login</a>
+              <a href="register.html" class="button button-secondary">Register</a>
+            </div>
+          </div>
+          
+          <!-- Mobile menu button -->
+          <button class="mobile-menu-button">
+            <span class="menu-icon"></span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="container section">
+        <div class="text-center section-header">
+          <h1>Contact Us</h1>
+          <p>We're here to help! Reach out to us with any questions or feedback about our services.</p>
+        </div>
+
+        <div class="contact-container">
+          <div class="contact-info">
+            <div class="contact-card gradient-card">
+              <h2>Get in Touch</h2>
+              <p>Have questions about our services? Our team is ready to assist you.</p>
+
+              <div class="contact-details">
+                <div class="contact-item">
+                  <div class="contact-icon">
+                    <i class="icon-mail"></i>
+                  </div>
+                  <div class="contact-text">
+                    <span>Email</span>
+                    <p>support@sevasarthi.gov.in</p>
+                  </div>
+                </div>
+                
+                <div class="contact-item">
+                  <div class="contact-icon">
+                    <i class="icon-phone"></i>
+                  </div>
+                  <div class="contact-text">
+                    <span>Phone</span>
+                    <p>1800-123-4567</p>
+                  </div>
+                </div>
+                
+                <div class="contact-item">
+                  <div class="contact-icon">
+                    <i class="icon-map-pin"></i>
+                  </div>
+                  <div class="contact-text">
+                    <span>Address</span>
+                    <p>123 Government Complex, New Delhi, India</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="contact-hours">
+                <h3>Office Hours</h3>
+                <p>Monday - Friday: 9:00 AM - 5:00 PM</p>
+                <p>Saturday: 9:00 AM - 1:00 PM</p>
+                <p>Sunday: Closed</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-form-container">
+            <div class="form-container">
+              <h3 class="form-title">Send us a message</h3>
+              
+              <form id="contactForm" class="contact-form">
+                <div class="form-group">
+                  <label for="name" class="form-label">Full Name</label>
+                  <div class="input-with-icon">
+                    <input
+                      id="name"
+                      name="name"
+                      type="text"
+                      class="form-control"
+                      placeholder="Enter your full name"
+                      required
+                    />
+                    <i class="icon-user"></i>
+                  </div>
+                </div>
+                
+                <div class="form-group">
+                  <label for="email" class="form-label">Email</label>
+                  <div class="input-with-icon">
+                    <input
+                      id="email"
+                      name="email"
+                      type="email"
+                      class="form-control"
+                      placeholder="Enter your email"
+                      required
+                    />
+                    <i class="icon-mail"></i>
+                  </div>
+                </div>
+                
+                <div class="form-group">
+                  <label for="phone" class="form-label">Phone Number</label>
+                  <div class="input-with-icon">
+                    <input
+                      id="phone"
+                      name="phone"
+                      type="tel"
+                      class="form-control"
+                      placeholder="Enter your phone number"
+                    />
+                    <i class="icon-phone"></i>
+                  </div>
+                </div>
+                
+                <div class="form-group">
+                  <label for="subject" class="form-label">Subject</label>
+                  <input
+                    id="subject"
+                    name="subject"
+                    type="text"
+                    class="form-control"
+                    placeholder="Enter subject"
+                    required
+                  />
+                </div>
+                
+                <div class="form-group">
+                  <label for="message" class="form-label">Message</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    class="form-control"
+                    rows="5"
+                    placeholder="Enter your message"
+                    required
+                  ></textarea>
+                </div>
+                
+                <button 
+                  type="submit" 
+                  class="button button-secondary form-button"
+                >
+                  Send Message <i class="icon-send"></i>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div>
+            <a href="index.html" class="footer-logo">
+              <div class="logo-circle">
+                <span>SS</span>
+              </div>
+              <span>Seva Sarthi</span>
+            </a>
+            <p>Digital platform for citizen services and grievance management</p>
+            <div class="social-icons">
+              <a href="#" class="social-icon"><i class="icon-facebook"></i></a>
+              <a href="#" class="social-icon"><i class="icon-twitter"></i></a>
+              <a href="#" class="social-icon"><i class="icon-instagram"></i></a>
+              <a href="#" class="social-icon"><i class="icon-linkedin"></i></a>
+            </div>
+          </div>
+          
+          <div class="footer-links">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="track.html">Track Status</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="services.html#grievance">Submit Grievance</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-links">
+            <h3>Services</h3>
+            <ul>
+              <li><a href="services.html#grievance">Grievance Submission</a></li>
+              <li><a href="services.html#announcements">Public Announcements</a></li>
+              <li><a href="apply.html?type=birth">Birth Certificate</a></li>
+              <li><a href="apply.html?type=income">Income Certificate</a></li>
+              <li><a href="apply.html?type=caste">Caste Certificate</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-contact">
+            <h3>Contact Us</h3>
+            <p><i class="icon-map-pin"></i> 123 Government Complex, New Delhi</p>
+            <p><i class="icon-phone"></i> 1800-123-4567</p>
+            <p><i class="icon-mail"></i> support@sevasarthi.gov.in</p>
+          </div>
+        </div>
+        
+        <div class="footer-copyright">
+          <p>&copy; <span id="current-year"></span> Seva Sarthi. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/contact.js"></script>
+  </body>
+</html>

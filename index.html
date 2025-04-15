@@ -1,26 +1,359 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>seva-sarthi-portal</title>
-    <meta name="description" content="Lovable Generated Project" />
-    <meta name="author" content="Lovable" />
-
-    <meta property="og:title" content="seva-sarthi-portal" />
-    <meta property="og:description" content="Lovable Generated Project" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@lovable_dev" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <title>Seva Sarthi Portal</title>
+    <meta name="description" content="Digital platform for citizen services" />
+    <meta name="author" content="Seva Sarthi" />
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
+    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
   </head>
 
   <body>
-    <div id="root"></div>
-    <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
-    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
-    <script type="module" src="/src/main.tsx"></script>
+    <header>
+      <nav class="navbar">
+        <div class="container navbar-container">
+          <!-- Logo -->
+          <a href="index.html" class="navbar-logo">
+            <div class="logo-circle">
+              <span>SS</span>
+            </div>
+            <span>Seva Sarthi</span>
+          </a>
+          
+          <!-- Navigation menu -->
+          <div class="navbar-menu">
+            <div class="navbar-links">
+              <a href="index.html" class="active">Home</a>
+              <a href="services.html">Services</a>
+              <a href="track.html">Track Status</a>
+              <a href="contact.html">Contact</a>
+              
+              <div class="dropdown">
+                <div class="dropdown-trigger">
+                  <span>Certificates</span>
+                  <i class="chevron-down"></i>
+                </div>
+                <div class="dropdown-menu">
+                  <a href="apply.html?type=birth" class="dropdown-item">Birth Certificate</a>
+                  <a href="apply.html?type=income" class="dropdown-item">Income Certificate</a>
+                  <a href="apply.html?type=caste" class="dropdown-item">Caste Certificate</a>
+                  <a href="apply.html?type=residence" class="dropdown-item">Residence Certificate</a>
+                </div>
+              </div>
+            </div>
+            
+            <div class="navbar-auth">
+              <a href="login.html" class="button button-outline">Login</a>
+              <a href="register.html" class="button button-secondary">Register</a>
+            </div>
+          </div>
+          
+          <!-- Mobile menu button -->
+          <button class="mobile-menu-button">
+            <span class="menu-icon"></span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <div class="hero-section">
+        <div class="container">
+          <div class="hero-content">
+            <div class="hero-text animate-fade-in">
+              <h1>Simplifying Document Services for Citizens</h1>
+              <p>Apply for government certificates, track your applications, and access citizen services - all in one place.</p>
+              <div class="hero-buttons">
+                <a href="register.html" class="button button-accent">Get Started</a>
+                <a href="track.html" class="button button-outline-white">Track Application</a>
+              </div>
+            </div>
+            
+            <div class="hero-cards">
+              <div class="hero-card">
+                <div class="card-icon">
+                  <i class="icon-file-text"></i>
+                </div>
+                <h3>Apply for Certificates</h3>
+                <p>Birth, income, caste, and residence certificates</p>
+              </div>
+              
+              <div class="hero-card">
+                <div class="card-icon">
+                  <i class="icon-search"></i>
+                </div>
+                <h3>Track Applications</h3>
+                <p>Check status of your submitted applications</p>
+              </div>
+              
+              <div class="hero-card hero-card-wide">
+                <div class="card-icon">
+                  <i class="icon-calendar"></i>
+                </div>
+                <h3>Manage Documents</h3>
+                <p>Upload and organize your supporting documents</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Services Section -->
+      <section class="section bg-light">
+        <div class="container">
+          <div class="text-center">
+            <h2>Our Services</h2>
+            <p>Apply for various certificates and documents through our streamlined digital platform.</p>
+          </div>
+          
+          <div class="services-grid">
+            <div class="card">
+              <div class="card-header">
+                <div class="card-icon">
+                  <i class="icon-user"></i>
+                </div>
+                <h3 class="card-title">Birth Certificate</h3>
+              </div>
+              <div class="card-body">
+                <p>Apply for birth certificate with required details and supporting documents.</p>
+              </div>
+              <div class="card-footer">
+                <a href="apply.html?type=birth" class="button button-primary">Apply Now</a>
+              </div>
+            </div>
+            
+            <div class="card">
+              <div class="card-header">
+                <div class="card-icon">
+                  <i class="icon-file-text"></i>
+                </div>
+                <h3 class="card-title">Income Certificate</h3>
+              </div>
+              <div class="card-body">
+                <p>Get income certificate with verification of your financial information.</p>
+              </div>
+              <div class="card-footer">
+                <a href="apply.html?type=income" class="button button-primary">Apply Now</a>
+              </div>
+            </div>
+            
+            <div class="card">
+              <div class="card-header">
+                <div class="card-icon">
+                  <i class="icon-users"></i>
+                </div>
+                <h3 class="card-title">Caste Certificate</h3>
+              </div>
+              <div class="card-body">
+                <p>Apply for caste certificate with proper documentation and verification.</p>
+              </div>
+              <div class="card-footer">
+                <a href="apply.html?type=caste" class="button button-primary">Apply Now</a>
+              </div>
+            </div>
+            
+            <div class="card">
+              <div class="card-header">
+                <div class="card-icon">
+                  <i class="icon-check"></i>
+                </div>
+                <h3 class="card-title">Residence Certificate</h3>
+              </div>
+              <div class="card-body">
+                <p>Obtain residence proof certificate with address verification.</p>
+              </div>
+              <div class="card-footer">
+                <a href="apply.html?type=residence" class="button button-primary">Apply Now</a>
+              </div>
+            </div>
+            
+            <div class="card">
+              <div class="card-header">
+                <div class="card-icon">
+                  <i class="icon-users"></i>
+                </div>
+                <h3 class="card-title">Marriage Certificate</h3>
+              </div>
+              <div class="card-body">
+                <p>Apply for marriage certificate with required documentation.</p>
+              </div>
+              <div class="card-footer">
+                <a href="apply.html?type=marriage" class="button button-primary">Apply Now</a>
+              </div>
+            </div>
+            
+            <div class="card">
+              <div class="card-header">
+                <div class="card-icon">
+                  <i class="icon-download"></i>
+                </div>
+                <h3 class="card-title">Domicile Certificate</h3>
+              </div>
+              <div class="card-body">
+                <p>Get domicile certificate proving your residence status.</p>
+              </div>
+              <div class="card-footer">
+                <a href="apply.html?type=domicile" class="button button-primary">Apply Now</a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="text-center" style="margin-top: 2rem;">
+            <a href="services.html" class="button button-secondary">View All Services</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- How It Works Section -->
+      <section class="section">
+        <div class="container">
+          <div class="text-center">
+            <h2>How It Works</h2>
+            <p>Get your certificates in a simple four-step process</p>
+          </div>
+          
+          <div class="process-steps">
+            <div class="process-step">
+              <div class="step-icon">
+                <i class="icon-file-text"></i>
+              </div>
+              <div class="step-connector"></div>
+              <h3>1. Apply Online</h3>
+              <p>Fill the application form and submit required details</p>
+            </div>
+            
+            <div class="process-step">
+              <div class="step-icon">
+                <i class="icon-alert-circle"></i>
+              </div>
+              <div class="step-connector"></div>
+              <h3>2. Upload Documents</h3>
+              <p>Upload supporting documents like ID proof</p>
+            </div>
+            
+            <div class="process-step">
+              <div class="step-icon">
+                <i class="icon-clock"></i>
+              </div>
+              <div class="step-connector"></div>
+              <h3>3. Processing</h3>
+              <p>Application is reviewed and processed by authorities</p>
+            </div>
+            
+            <div class="process-step">
+              <div class="step-icon">
+                <i class="icon-check-circle"></i>
+              </div>
+              <h3>4. Download Certificate</h3>
+              <p>Once approved, download your certificate digitally</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Status Tracker Section -->
+      <section class="section bg-white">
+        <div class="container">
+          <div class="max-w-3xl mx-auto">
+            <div class="text-center mb-10">
+              <h2>Track Your Application</h2>
+              <p>Enter your application ID and mobile number to check the current status</p>
+            </div>
+            
+            <div class="tracker-card">
+              <form id="trackForm" class="track-form">
+                <div class="form-group">
+                  <label for="applicationId">Application ID</label>
+                  <input type="text" id="applicationId" placeholder="Enter your application ID">
+                </div>
+                
+                <div class="form-group">
+                  <label for="phoneNumber">Registered Mobile Number</label>
+                  <input type="tel" id="phoneNumber" placeholder="Enter your mobile number">
+                </div>
+                
+                <button type="submit" class="button button-primary button-lg">
+                  <i class="icon-search"></i> Track Now
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div>
+            <a href="index.html" class="footer-logo">
+              <div class="logo-circle">
+                <span>SS</span>
+              </div>
+              <span>Seva Sarthi</span>
+            </a>
+            <p>Digital platform for citizen services and grievance management</p>
+            <div class="social-icons">
+              <a href="#" class="social-icon"><i class="icon-facebook"></i></a>
+              <a href="#" class="social-icon"><i class="icon-twitter"></i></a>
+              <a href="#" class="social-icon"><i class="icon-instagram"></i></a>
+              <a href="#" class="social-icon"><i class="icon-linkedin"></i></a>
+            </div>
+          </div>
+          
+          <div class="footer-links">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="track.html">Track Status</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="services.html#grievance">Submit Grievance</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-links">
+            <h3>Services</h3>
+            <ul>
+              <li><a href="services.html#grievance">Grievance Submission</a></li>
+              <li><a href="services.html#announcements">Public Announcements</a></li>
+              <li><a href="apply.html?type=birth">Birth Certificate</a></li>
+              <li><a href="apply.html?type=income">Income Certificate</a></li>
+              <li><a href="apply.html?type=caste">Caste Certificate</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-contact">
+            <h3>Contact Us</h3>
+            <p><i class="icon-map-pin"></i> 123 Government Complex, New Delhi</p>
+            <p><i class="icon-phone"></i> 1800-123-4567</p>
+            <p><i class="icon-mail"></i> support@sevasarthi.gov.in</p>
+          </div>
+        </div>
+        
+        <div class="footer-copyright">
+          <p>&copy; <span id="current-year"></span> Seva Sarthi. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Chat Widget -->
+    <div class="chat-widget">
+      <div class="chat-button" id="chatToggleBtn">
+        <i class="icon-message-square"></i>
+      </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
   </body>
 </html>

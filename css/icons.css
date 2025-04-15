@@ -1,0 +1,112 @@
+
+/* Icon classes */
+
+/* Add icon references below */
+.icon-user:before {
+  content: "👤";
+}
+
+.icon-lock:before {
+  content: "🔒";
+}
+
+.icon-mail:before {
+  content: "✉️";
+}
+
+.icon-phone:before {
+  content: "📱";
+}
+
+.icon-check-circle:before {
+  content: "✅";
+}
+
+.icon-file-text:before {
+  content: "📄";
+}
+
+.icon-users:before {
+  content: "👥";
+}
+
+.icon-check:before {
+  content: "✓";
+}
+
+.icon-download:before {
+  content: "⬇️";
+}
+
+.icon-search:before {
+  content: "🔍";
+}
+
+.icon-vote:before {
+  content: "🗳️";
+}
+
+.icon-bot:before {
+  content: "🤖";
+}
+
+.icon-bell:before {
+  content: "🔔";
+}
+
+.icon-facebook:before {
+  content: "ⓕ";
+}
+
+.icon-twitter:before {
+  content: "ⓣ";
+}
+
+.icon-instagram:before {
+  content: "ⓘ";
+}
+
+.icon-linkedin:before {
+  content: "ⓛ";
+}
+
+.icon-map-pin:before {
+  content: "📍";
+}
+
+.icon-calendar:before {
+  content: "📅";
+}
+
+.icon-message-square:before {
+  content: "💬";
+}
+
+.icon-send:before {
+  content: "📨";
+}
+
+.icon-alert-circle:before {
+  content: "⚠️";
+}
+
+.icon-clock:before {
+  content: "🕒";
+}
+
+.icon-x-circle:before {
+  content: "❌";
+}
+
+.icon-file:before {
+  content: "📃";
+}
+
+.icon-file-spreadsheet:before {
+  content: "📊";
+}
+
+.chevron-down:before {
+  content: "▼";
+  font-size: 12px;
+}

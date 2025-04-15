@@ -1,0 +1,285 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Services - Seva Sarthi Portal</title>
+    <meta name="description" content="Services offered by Seva Sarthi Portal" />
+    <meta name="author" content="Seva Sarthi" />
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
+    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="container navbar-container">
+          <!-- Logo -->
+          <a href="index.html" class="navbar-logo">
+            <div class="logo-circle">
+              <span>SS</span>
+            </div>
+            <span>Seva Sarthi</span>
+          </a>
+          
+          <!-- Navigation menu -->
+          <div class="navbar-menu">
+            <div class="navbar-links">
+              <a href="index.html">Home</a>
+              <a href="services.html" class="active">Services</a>
+              <a href="track.html">Track Status</a>
+              <a href="contact.html">Contact</a>
+              
+              <div class="dropdown">
+                <div class="dropdown-trigger">
+                  <span>Certificates</span>
+                  <i class="chevron-down"></i>
+                </div>
+                <div class="dropdown-menu">
+                  <a href="apply.html?type=birth" class="dropdown-item">Birth Certificate</a>
+                  <a href="apply.html?type=income" class="dropdown-item">Income Certificate</a>
+                  <a href="apply.html?type=caste" class="dropdown-item">Caste Certificate</a>
+                  <a href="apply.html?type=residence" class="dropdown-item">Residence Certificate</a>
+                </div>
+              </div>
+            </div>
+            
+            <div class="navbar-auth">
+              <a href="login.html" class="button button-outline">Login</a>
+              <a href="register.html" class="button button-secondary">Register</a>
+            </div>
+          </div>
+          
+          <!-- Mobile menu button -->
+          <button class="mobile-menu-button">
+            <span class="menu-icon"></span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero-secondary">
+        <div class="container">
+          <div class="hero-content text-center">
+            <h1>Our Services</h1>
+            <p>Explore the range of digital services offered to make governance accessible and efficient.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="container service-section">
+        <div class="services-grid">
+          <!-- 1. Online Grievance Submission -->
+          <div id="grievance" class="feature-card">
+            <div class="feature-icon">
+              <i class="icon-message-square"></i>
+            </div>
+            <h3 class="feature-title">Online Grievance Submission</h3>
+            <p>Submit complaints and grievances online for quick resolution. Track and manage all your submitted issues in one place.</p>
+            <div class="feature-action">
+              <a href="grievance.html" class="button button-primary">Submit Grievance</a>
+            </div>
+          </div>
+
+          <!-- 2. Digital Voting & Polling -->
+          <div id="voting" class="feature-card">
+            <div class="feature-icon">
+              <i class="icon-vote"></i>
+            </div>
+            <h3 class="feature-title">Digital Voting & Polling</h3>
+            <p>Participate in local elections and polls digitally. Secure and transparent voting system for community decisions.</p>
+            <div class="feature-action">
+              <a href="voting.html" class="button button-primary">View Active Polls</a>
+            </div>
+          </div>
+
+          <!-- 3. Online Service Requests -->
+          <div id="apply" class="feature-card">
+            <div class="feature-icon">
+              <i class="icon-file-text"></i>
+            </div>
+            <h3 class="feature-title">Online Service Requests</h3>
+            <p>Apply for various certificates and government services with easy tracking and updates on your applications.</p>
+            <div class="feature-action">
+              <a href="apply.html" class="button button-primary">Apply Now</a>
+            </div>
+          </div>
+
+          <!-- 4. AI Chatbot Assistance -->
+          <div id="chatbot" class="feature-card">
+            <div class="feature-icon">
+              <i class="icon-bot"></i>
+            </div>
+            <h3 class="feature-title">AI Chatbot Assistance</h3>
+            <p>Get instant help with your queries through our AI chatbot. Live chat support available for real-time assistance.</p>
+            <div class="feature-action">
+              <button id="startChatBtn" class="button button-primary">Start Chat</button>
+            </div>
+          </div>
+
+          <!-- 5. Public Announcements -->
+          <div id="announcements" class="feature-card">
+            <div class="feature-icon">
+              <i class="icon-bell"></i>
+            </div>
+            <h3 class="feature-title">Public Announcements</h3>
+            <p>Stay updated with the latest announcements from local government. Important notifications delivered directly to your dashboard.</p>
+            <div class="feature-action">
+              <a href="announcements.html" class="button button-primary">View Announcements</a>
+            </div>
+          </div>
+
+          <!-- 6. Track Grievance Status -->
+          <div id="track" class="feature-card">
+            <div class="feature-icon">
+              <i class="icon-search"></i>
+            </div>
+            <h3 class="feature-title">Track Grievance Status</h3>
+            <p>Track the status of your submitted grievances and applications. Enter your request ID to check real-time progress.</p>
+            <div class="feature-action">
+              <a href="track.html" class="button button-primary">Track Now</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section bg-light">
+        <div class="container">
+          <div class="text-center">
+            <h2>Certificate Services</h2>
+            <p>Apply for official certificates and documents with our simplified online process.</p>
+          </div>
+
+          <div class="services-grid">
+            <!-- Certificate 1 -->
+            <div class="feature-card">
+              <div class="feature-icon accent-gradient">
+                <i class="icon-user"></i>
+              </div>
+              <h3 class="feature-title">Birth Certificate</h3>
+              <p>Apply for birth certificate with required details and supporting documents like hospital records and identity proof.</p>
+              <div class="feature-action">
+                <a href="apply.html?type=birth" class="button button-secondary">Apply Now</a>
+              </div>
+            </div>
+
+            <!-- Certificate 2 -->
+            <div class="feature-card">
+              <div class="feature-icon accent-gradient">
+                <i class="icon-file-spreadsheet"></i>
+              </div>
+              <h3 class="feature-title">Income Certificate</h3>
+              <p>Get income certificate with verification of your financial information. Upload salary slips or income tax returns as proof.</p>
+              <div class="feature-action">
+                <a href="apply.html?type=income" class="button button-secondary">Apply Now</a>
+              </div>
+            </div>
+
+            <!-- Certificate 3 -->
+            <div class="feature-card">
+              <div class="feature-icon accent-gradient">
+                <i class="icon-users"></i>
+              </div>
+              <h3 class="feature-title">Caste Certificate</h3>
+              <p>Apply for caste certificate with proper documentation and verification through a streamlined online process.</p>
+              <div class="feature-action">
+                <a href="apply.html?type=caste" class="button button-secondary">Apply Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div>
+            <a href="index.html" class="footer-logo">
+              <div class="logo-circle">
+                <span>SS</span>
+              </div>
+              <span>Seva Sarthi</span>
+            </a>
+            <p>Digital platform for citizen services and grievance management</p>
+            <div class="social-icons">
+              <a href="#" class="social-icon"><i class="icon-facebook"></i></a>
+              <a href="#" class="social-icon"><i class="icon-twitter"></i></a>
+              <a href="#" class="social-icon"><i class="icon-instagram"></i></a>
+              <a href="#" class="social-icon"><i class="icon-linkedin"></i></a>
+            </div>
+          </div>
+          
+          <div class="footer-links">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="track.html">Track Status</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="services.html#grievance">Submit Grievance</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-links">
+            <h3>Services</h3>
+            <ul>
+              <li><a href="services.html#grievance">Grievance Submission</a></li>
+              <li><a href="services.html#announcements">Public Announcements</a></li>
+              <li><a href="apply.html?type=birth">Birth Certificate</a></li>
+              <li><a href="apply.html?type=income">Income Certificate</a></li>
+              <li><a href="apply.html?type=caste">Caste Certificate</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-contact">
+            <h3>Contact Us</h3>
+            <p><i class="icon-map-pin"></i> 123 Government Complex, New Delhi</p>
+            <p><i class="icon-phone"></i> 1800-123-4567</p>
+            <p><i class="icon-mail"></i> support@sevasarthi.gov.in</p>
+          </div>
+        </div>
+        
+        <div class="footer-copyright">
+          <p>&copy; <span id="current-year"></span> Seva Sarthi. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Chat Widget -->
+    <div class="chat-widget">
+      <div class="chat-button" id="chatToggleBtn">
+        <i class="icon-bot"></i>
+      </div>
+    </div>
+
+    <div class="chat-popup" id="chatPopup">
+      <div class="chat-header">
+        <h4>Seva Sarthi Assistant</h4>
+        <button class="close-btn" id="closeChatBtn">&times;</button>
+      </div>
+      <div class="chat-messages" id="chatMessages">
+        <div class="message bot">
+          <div class="message-content">
+            Hello! Welcome to Seva Sarthi. How can I help you today?
+          </div>
+        </div>
+      </div>
+      <div class="chat-input">
+        <input type="text" id="messageInput" placeholder="Type your message...">
+        <button id="sendMessageBtn">Send</button>
+      </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/chatbot.js"></script>
+  </body>
+</html>

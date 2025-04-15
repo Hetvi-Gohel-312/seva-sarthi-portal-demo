@@ -1,0 +1,184 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - Seva Sarthi Portal</title>
+    <meta name="description" content="Login to Seva Sarthi Portal" />
+    <meta name="author" content="Seva Sarthi" />
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
+    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="container navbar-container">
+          <!-- Logo -->
+          <a href="index.html" class="navbar-logo">
+            <div class="logo-circle">
+              <span>SS</span>
+            </div>
+            <span>Seva Sarthi</span>
+          </a>
+          
+          <!-- Navigation menu -->
+          <div class="navbar-menu">
+            <div class="navbar-links">
+              <a href="index.html">Home</a>
+              <a href="services.html">Services</a>
+              <a href="track.html">Track Status</a>
+              <a href="contact.html">Contact</a>
+              
+              <div class="dropdown">
+                <div class="dropdown-trigger">
+                  <span>Certificates</span>
+                  <i class="chevron-down"></i>
+                </div>
+                <div class="dropdown-menu">
+                  <a href="apply.html?type=birth" class="dropdown-item">Birth Certificate</a>
+                  <a href="apply.html?type=income" class="dropdown-item">Income Certificate</a>
+                  <a href="apply.html?type=caste" class="dropdown-item">Caste Certificate</a>
+                  <a href="apply.html?type=residence" class="dropdown-item">Residence Certificate</a>
+                </div>
+              </div>
+            </div>
+            
+            <div class="navbar-auth">
+              <a href="login.html" class="button button-outline active">Login</a>
+              <a href="register.html" class="button button-secondary">Register</a>
+            </div>
+          </div>
+          
+          <!-- Mobile menu button -->
+          <button class="mobile-menu-button">
+            <span class="menu-icon"></span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="container section auth-container">
+        <div class="form-container">
+          <h2 class="form-title">Welcome Back</h2>
+          <p class="text-center">Enter your credentials to access your Seva Sarthi account</p>
+          
+          <form id="loginForm" class="auth-form">
+            <div class="form-group">
+              <label for="email" class="form-label">Email Address</label>
+              <div class="input-with-icon">
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  class="form-control"
+                  placeholder="Enter your email"
+                  required
+                />
+                <i class="icon-user"></i>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <div class="label-with-link">
+                <label for="password" class="form-label">Password</label>
+                <a href="forgot-password.html" class="form-link">Forgot password?</a>
+              </div>
+              <div class="input-with-icon">
+                <input
+                  id="password"
+                  name="password"
+                  type="password"
+                  class="form-control"
+                  placeholder="Enter your password"
+                  required
+                />
+                <i class="icon-lock"></i>
+              </div>
+            </div>
+            
+            <button 
+              type="submit" 
+              class="button button-primary form-button"
+            >
+              Login to Account
+            </button>
+          </form>
+          
+          <div class="form-footer">
+            <p>
+              Don't have an account?
+              <a href="register.html">Register now</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div>
+            <a href="index.html" class="footer-logo">
+              <div class="logo-circle">
+                <span>SS</span>
+              </div>
+              <span>Seva Sarthi</span>
+            </a>
+            <p>Digital platform for citizen services and grievance management</p>
+            <div class="social-icons">
+              <a href="#" class="social-icon"><i class="icon-facebook"></i></a>
+              <a href="#" class="social-icon"><i class="icon-twitter"></i></a>
+              <a href="#" class="social-icon"><i class="icon-instagram"></i></a>
+              <a href="#" class="social-icon"><i class="icon-linkedin"></i></a>
+            </div>
+          </div>
+          
+          <div class="footer-links">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="track.html">Track Status</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="services.html#grievance">Submit Grievance</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-links">
+            <h3>Services</h3>
+            <ul>
+              <li><a href="services.html#grievance">Grievance Submission</a></li>
+              <li><a href="services.html#announcements">Public Announcements</a></li>
+              <li><a href="apply.html?type=birth">Birth Certificate</a></li>
+              <li><a href="apply.html?type=income">Income Certificate</a></li>
+              <li><a href="apply.html?type=caste">Caste Certificate</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-contact">
+            <h3>Contact Us</h3>
+            <p><i class="icon-map-pin"></i> 123 Government Complex, New Delhi</p>
+            <p><i class="icon-phone"></i> 1800-123-4567</p>
+            <p><i class="icon-mail"></i> support@sevasarthi.gov.in</p>
+          </div>
+        </div>
+        
+        <div class="footer-copyright">
+          <p>&copy; <span id="current-year"></span> Seva Sarthi. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/auth.js"></script>
+  </body>
+</html>

@@ -1,0 +1,251 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Public Announcements - Seva Sarthi Portal</title>
+    <meta name="description" content="Stay updated with the latest public announcements" />
+    <meta name="author" content="Seva Sarthi" />
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
+    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="container navbar-container">
+          <!-- Logo -->
+          <a href="index.html" class="navbar-logo">
+            <div class="logo-circle">
+              <span>SS</span>
+            </div>
+            <span>Seva Sarthi</span>
+          </a>
+          
+          <!-- Navigation menu -->
+          <div class="navbar-menu">
+            <div class="navbar-links">
+              <a href="index.html">Home</a>
+              <a href="services.html" class="active">Services</a>
+              <a href="track.html">Track Status</a>
+              <a href="contact.html">Contact</a>
+              
+              <div class="dropdown">
+                <div class="dropdown-trigger">
+                  <span>Certificates</span>
+                  <i class="chevron-down"></i>
+                </div>
+                <div class="dropdown-menu">
+                  <a href="apply.html?type=birth" class="dropdown-item">Birth Certificate</a>
+                  <a href="apply.html?type=income" class="dropdown-item">Income Certificate</a>
+                  <a href="apply.html?type=caste" class="dropdown-item">Caste Certificate</a>
+                  <a href="apply.html?type=residence" class="dropdown-item">Residence Certificate</a>
+                </div>
+              </div>
+            </div>
+            
+            <div class="navbar-auth">
+              <a href="login.html" class="button button-outline">Login</a>
+              <a href="register.html" class="button button-secondary">Register</a>
+            </div>
+          </div>
+          
+          <!-- Mobile menu button -->
+          <button class="mobile-menu-button">
+            <span class="menu-icon"></span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero-secondary">
+        <div class="container">
+          <div class="hero-content text-center">
+            <h1>Public Announcements</h1>
+            <p>Stay updated with the latest information and announcements</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="container">
+        <div class="announcements-container" style="margin-top: -3rem;">
+          <div class="filter-container">
+            <div class="search-box">
+              <input type="text" id="searchInput" placeholder="Search announcements..." class="form-control" />
+              <i class="icon-search"></i>
+            </div>
+            
+            <div class="filter-box">
+              <select id="categoryFilter" class="form-control">
+                <option value="">All Categories</option>
+                <option value="Public Services">Public Services</option>
+                <option value="Digital Services">Digital Services</option>
+                <option value="Healthcare">Healthcare</option>
+                <option value="Urban Planning">Urban Planning</option>
+                <option value="Infrastructure">Infrastructure</option>
+              </select>
+            </div>
+          </div>
+          
+          <div id="announcementsList" class="announcements-list">
+            <div class="announcement important">
+              <div class="announcement-header">
+                <h3 class="announcement-title">
+                  <i class="icon-alert-circle"></i>
+                  Water Supply Interruption Notice
+                </h3>
+                <span class="announcement-date">
+                  <i class="icon-calendar"></i>
+                  2023-10-10
+                </span>
+              </div>
+              
+              <div class="announcement-category">Public Services</div>
+              
+              <p>Due to maintenance work, there will be a water supply interruption in Sectors 10, 11, and 12 on Saturday, October 15th from 10:00 AM to 4:00 PM.</p>
+            </div>
+            
+            <div class="announcement">
+              <div class="announcement-header">
+                <h3 class="announcement-title">
+                  New Online Service for Birth Certificates
+                </h3>
+                <span class="announcement-date">
+                  <i class="icon-calendar"></i>
+                  2023-10-08
+                </span>
+              </div>
+              
+              <div class="announcement-category">Digital Services</div>
+              
+              <p>We're pleased to announce that birth certificate applications can now be submitted online through our portal. The service will be available starting November 1st, 2023.</p>
+            </div>
+            
+            <div class="announcement important">
+              <div class="announcement-header">
+                <h3 class="announcement-title">
+                  <i class="icon-alert-circle"></i>
+                  COVID-19 Vaccination Drive
+                </h3>
+                <span class="announcement-date">
+                  <i class="icon-calendar"></i>
+                  2023-10-05
+                </span>
+              </div>
+              
+              <div class="announcement-category">Healthcare</div>
+              
+              <p>A special COVID-19 vaccination drive will be held at the Community Center on October 20th-22nd from 9:00 AM to 5:00 PM. All citizens above 18 years are eligible.</p>
+            </div>
+            
+            <div class="announcement">
+              <div class="announcement-header">
+                <h3 class="announcement-title">
+                  Public Meeting on Urban Development
+                </h3>
+                <span class="announcement-date">
+                  <i class="icon-calendar"></i>
+                  2023-10-03
+                </span>
+              </div>
+              
+              <div class="announcement-category">Urban Planning</div>
+              
+              <p>A public meeting to discuss the upcoming urban development projects will be held on October 25th at 6:00 PM in the Town Hall. All residents are invited to attend and share their views.</p>
+            </div>
+            
+            <div class="announcement">
+              <div class="announcement-header">
+                <h3 class="announcement-title">
+                  Road Repair Work
+                </h3>
+                <span class="announcement-date">
+                  <i class="icon-calendar"></i>
+                  2023-10-01
+                </span>
+              </div>
+              
+              <div class="announcement-category">Infrastructure</div>
+              
+              <p>Road repair work will commence on Main Street from October 18th and is expected to continue for two weeks. Commuters are advised to take alternative routes during this period.</p>
+            </div>
+          </div>
+          
+          <div id="noResults" class="no-results" style="display: none;">
+            <div class="no-results-icon">
+              <i class="icon-bell"></i>
+            </div>
+            <h3>No Announcements Found</h3>
+            <p>No announcements match your search criteria. Try adjusting your filters.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div>
+            <a href="index.html" class="footer-logo">
+              <div class="logo-circle">
+                <span>SS</span>
+              </div>
+              <span>Seva Sarthi</span>
+            </a>
+            <p>Digital platform for citizen services and grievance management</p>
+            <div class="social-icons">
+              <a href="#" class="social-icon"><i class="icon-facebook"></i></a>
+              <a href="#" class="social-icon"><i class="icon-twitter"></i></a>
+              <a href="#" class="social-icon"><i class="icon-instagram"></i></a>
+              <a href="#" class="social-icon"><i class="icon-linkedin"></i></a>
+            </div>
+          </div>
+          
+          <div class="footer-links">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="track.html">Track Status</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="services.html#grievance">Submit Grievance</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-links">
+            <h3>Services</h3>
+            <ul>
+              <li><a href="services.html#grievance">Grievance Submission</a></li>
+              <li><a href="services.html#announcements">Public Announcements</a></li>
+              <li><a href="apply.html?type=birth">Birth Certificate</a></li>
+              <li><a href="apply.html?type=income">Income Certificate</a></li>
+              <li><a href="apply.html?type=caste">Caste Certificate</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-contact">
+            <h3>Contact Us</h3>
+            <p><i class="icon-map-pin"></i> 123 Government Complex, New Delhi</p>
+            <p><i class="icon-phone"></i> 1800-123-4567</p>
+            <p><i class="icon-mail"></i> support@sevasarthi.gov.in</p>
+          </div>
+        </div>
+        
+        <div class="footer-copyright">
+          <p>&copy; <span id="current-year"></span> Seva Sarthi. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/announcements.js"></script>
+  </body>
+</html>
