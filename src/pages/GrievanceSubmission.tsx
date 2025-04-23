@@ -40,11 +40,11 @@ const GrievanceSubmission = () => {
     },
     {
       id: "GR-2023-003",
-      subject: "Garbage Collection Delay",
-      description: "Regular garbage collection has been irregular for the past week in our neighborhood.",
+      subject: "Fertilizer Supply Delay",
+      description: "Fertilizer supply has been delayed in many villages, affecting crop cycles.",
       date: "2023-10-05",
       status: "resolved",
-      category: "Sanitation"
+      category: "Agriculture"
     },
     {
       id: "GR-2023-004",
@@ -252,7 +252,7 @@ const GrievanceSubmission = () => {
                   <option value="">Select a category</option>
                   <option value="Public Services">Public Services</option>
                   <option value="Infrastructure">Infrastructure</option>
-                  <option value="Sanitation">Sanitation</option>
+                  <option value="Agriculture">Agriculture</option>
                   <option value="Documentation">Documentation</option>
                   <option value="Healthcare">Healthcare</option>
                   <option value="Education">Education</option>
